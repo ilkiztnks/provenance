@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Provenance: Ressam Defteri</title>
 </head>
 <body>
 <title>Provenance: Ressam Defteri</title>
@@ -251,7 +252,7 @@ body.focusing .node.sel{box-shadow:0 0 0 2px var(--sc)}
 .see[aria-pressed="true"]{background:var(--sc);color:var(--card);border-color:var(--sc)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--nav-h) + 16px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:999px;font-size:14px;max-width:calc(100% - 32px)}
 @media (min-width:960px){.toast{bottom:24px}}
-@media (prefers-reduced-motion: reduce){.node,.me{transition:none}}
+html.rm .node,html.rm .me{transition:none}
 
 /* Künyeler: italik serif */
 .facts dd,.dcard .meta,.ritem span,.ncard .when,.tn-meta,.life dd{font-family:var(--f-label);font-style:italic;font-size:16px;line-height:1.35}
@@ -344,7 +345,7 @@ body.focusing .node.sel{box-shadow:0 0 0 2px var(--sc)}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
 .mc-go{font-size:12.5px;font-weight:600;color:var(--sc);white-space:nowrap}
 @keyframes fadeup{from{opacity:.001;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion: reduce){.eblock{animation:none}.scard{transition:none}}
+html.rm .eblock{animation:none}html.rm .scard{transition:none}
 @media (max-width:560px){.sc-name{font-size:30px}.mgrid{grid-template-columns:1fr}}
 
 /* ===== Derinlik (3B) ===== */
@@ -450,7 +451,7 @@ body.focusing .node.sel{box-shadow:0 0 0 2px var(--sc)}
 .back{transform:rotateY(180deg);background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .back .fact{font-family:var(--f-display);font-size:22px;line-height:1.25}
 .back .meta{margin-top:auto;font-size:14px;opacity:.8}
-@media (prefers-reduced-motion: reduce){.tilt,.flip-in,.tmr.arrive,.dk.c1,.pnode.cur{transition:none;animation:none}}
+html.rm .tilt,html.rm .flip-in,html.rm .tmr.arrive,html.rm .dk.c1,html.rm .pnode.cur{transition:none;animation:none}
 
 /* ===== Keşfet: müze girişi ===== */
 .museum{--gold1:#8A6A2B;--gold2:#E9CF8A;--gold3:#FFF3CF;position:relative;border-radius:22px;padding:14px;background:radial-gradient(120% 90% at 50% -10%,#3A2E1E 0%,#1A150F 45%,#0D0B08 100%);box-shadow:0 40px 60px -36px rgba(10,8,4,.85),inset 0 0 0 1px rgba(233,207,138,.18);overflow:hidden;isolation:isolate}
@@ -482,7 +483,7 @@ body.focusing .node.sel{box-shadow:0 0 0 2px var(--sc)}
 @media (max-width:600px){#v-akim .pcard .pc-y{display:none}#v-akim .pc-dir{font-size:12px}}
 @media (min-width:960px){#v-akim .pager{bottom:0;margin:16px 0 0;padding:12px 0 16px}}
 @media (max-width:480px){.mu-kicker{letter-spacing:.16em;font-size:11px}.mu-stats{letter-spacing:.12em;font-size:10.5px}}
-@media (prefers-reduced-motion: reduce){.gild{animation:none}}
+html.rm .gild{animation:none}
 
 /* ===== Keşfet: fildişi galeri teması ===== */
 body{--paper:#F4EEE1;--card:#FFFCF5;--ink:#1C160C;--muted:#6E6150;--line:#E2D6BE;--gold-d:#7A5A1E;--gold:#B8913F;--enamel:#15120D;
@@ -597,7 +598,7 @@ body{--pri-bg:#15120D;--pri-fg:#F3DDA0}
 .tour-card.center .btn{background:transparent;color:#F1E6CC;border-color:rgba(233,207,138,.5)}
 .tour-card.center .btn.pri{background:linear-gradient(115deg,#C9A659,#F3DDA0 40%,#C9A659);color:#15120D;border:0}
 .tour .btn{font-size:14px;padding:9px 16px}
-@media (prefers-reduced-motion: reduce){.tour-hole,.tour-card{transition:none}}
+html.rm .tour-hole,html.rm .tour-card{transition:none}
 
 /* ===== Metalik bölüm renkleri ===== */
 [data-s="b"]{--sm:linear-gradient(115deg,#1A2766 0%,#3B52BE 22%,#AFC0F5 36%,#5068D2 48%,#1D2B70 70%,#6A80DB 88%,#24347F 100%)}
@@ -678,7 +679,7 @@ body{--gm:linear-gradient(115deg,#7A5A1E 0%,#C9A659 22%,#FFF3CF 36%,#D9B867 48%,
 @keyframes pull{50%{transform:rotate(-38deg)}100%{transform:rotate(-38deg)}}
 @keyframes shake{20%,60%{transform:translate(-2px,1px)}40%,80%{transform:translate(2px,-1px)}}
 @media (max-width:640px){.deck.mach{order:-1}.tmach{width:min(78%,240px)}}
-@media (prefers-reduced-motion: reduce){.tmach *{animation:none!important}}
+html.rm .tmach *{animation:none!important}
 
 /* ===== Defterim: kalem ve fotoğraflar ===== */
 .dhead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px}
@@ -690,7 +691,7 @@ body{--gm:linear-gradient(115deg,#7A5A1E 0%,#C9A659 22%,#FFF3CF 36%,#D9B867 48%,
 @keyframes write{0%{stroke-dashoffset:240}55%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
 @keyframes penmove{0%{transform:translate(-134px,16px) rotate(-4deg)}12%{transform:translate(-112px,4px)}25%{transform:translate(-86px,18px)}38%{transform:translate(-50px,0)}55%{transform:translate(0,0) rotate(0)}80%{transform:translate(4px,-6px) rotate(3deg)}100%{transform:translate(-134px,16px) rotate(-4deg)}}
 @media (max-width:640px){.dhead{flex-direction:column-reverse;align-items:stretch}.quill{width:150px;align-self:flex-end;margin-bottom:-18px}}
-@media (prefers-reduced-motion: reduce){.quill .ink{animation:none;stroke-dashoffset:0}.quill .pen{animation:none}}
+html.rm .quill .ink{animation:none;stroke-dashoffset:0}html.rm .quill .pen{animation:none}
 .phadd{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:inset 0 3px 0 var(--gold)}
 .phadd .meta{margin:4px 0 0;font-size:14.5px;color:var(--muted);max-width:52ch}
 .phbtn{cursor:pointer;font-size:14px;padding:9px 16px}
@@ -782,7 +783,7 @@ body{--gm:linear-gradient(115deg,#7A5A1E 0%,#C9A659 22%,#FFF3CF 36%,#D9B867 48%,
 @keyframes breathe{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.012)}}
 .fig.mini .hd,.fig.mini .eyes,.fig.mini .arm,.fig.mini .bd{animation:none}
 .lvb.now .fig.mini .hd{animation:look 6s ease-in-out infinite}.lvb.now .fig.mini .arm{animation:paint 2.6s ease-in-out infinite}.lvb.now .fig.mini .eyes{animation:eyes 6s ease-in-out infinite}
-@media (prefers-reduced-motion: reduce){.fig *{animation:none!important}}
+html.rm .fig *{animation:none!important}
 .rozet{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--line);padding-top:14px}
 .rz-h{display:flex;align-items:baseline;gap:10px}
 .rz-s{font-family:var(--f-label);font-style:italic;font-size:15px;color:var(--muted)}
@@ -1668,6 +1669,8 @@ document.documentElement.lang="tr";
 const THEME_KEY="provenance-tema";
 function applyTheme(t){document.documentElement.dataset.theme=t;const b=document.getElementById("themeBtn");if(b){b.setAttribute("aria-label",t==="dark"?"Fildişi temaya geç":"Koyu temaya geç");b.querySelector(".tl").textContent=t==="dark"?"Fildişi":"Koyu"}}
 applyTheme((()=>{try{return localStorage.getItem(THEME_KEY)||"light"}catch(_){return "light"}})());
+const RM_KEY="provenance-hareket";
+try{if(localStorage.getItem(RM_KEY)==="az")document.documentElement.classList.add("rm")}catch(_){}
 document.getElementById("themeBtn").addEventListener("click",()=>{const t=document.documentElement.dataset.theme==="dark"?"light":"dark";applyTheme(t);try{localStorage.setItem(THEME_KEY,t)}catch(_){}});
 const $=s=>document.querySelector(s);
 const byId=Object.fromEntries(N.map(n=>[n.id,n]));
@@ -1930,6 +1933,10 @@ function renderKesfet(){
       <li><b>Harita</b> bir akımın köklerini ve mirasını soyağacı gibi gösterir. <b>Defterim</b> ise senin: notların, favorilerin, gördüğün eserler.</li>
     </ol>
   </section>
+  <section class="howto" aria-labelledby="ay">
+    <h2 id="ay">Ayarlar</h2>
+    <div class="row"><button type="button" class="btn" data-rm aria-pressed="${!reduceMotion()}">${reduceMotion()?"Animasyonlar kapalı · aç":"Animasyonlar açık · azalt"}</button><span class="meta" style="margin:0;font-size:13.5px;color:var(--muted)">Zaman makinesi, galeri geçidi ve hareketli figürler</span></div>
+  </section>
   <section class="howto" aria-labelledby="dz">
     <h2 id="dz">Defterin</h2>
     <div class="mini"><span><b>${nN}</b> not</span><span><b>${nF}</b> favori ressam</span><span><b>${nS}</b> gördüğün eser</span><span><b>${live(Store.d.photos||{}).length}</b> fotoğraf</span></div>
@@ -1941,13 +1948,14 @@ function renderKesfet(){
 $("#v-kesfet").addEventListener("click",e=>{
   const f=e.target.closest("[data-tmf]");if(f){tmFilter=f.dataset.tmf;document.querySelectorAll("[data-tmf]").forEach(b=>b.setAttribute("aria-pressed",b===f));return}
   if(e.target.closest("[data-tm-go],[data-tm-again]")){startDraw();return}
+  if(e.target.closest("[data-rm]")){const on=document.documentElement.classList.toggle("rm");try{localStorage.setItem(RM_KEY,on?"az":"tam")}catch(_){}renderKesfet();toast(on?"Animasyonlar azaltıldı":"Animasyonlar açıldı");return}
   if(e.target.closest("[data-fact-new]")){factSeed++;$("#fgrid").innerHTML=factsHTML();return}
   const qb=e.target.closest("[data-quiz]");if(qb){const q=$("#fquiz");q.innerHTML=quizHTML();qb.textContent="Yeni soru ↻";const c=q.querySelector(".qwrap");if(c){SND.deal();c.classList.add("deal");c.scrollIntoView({block:"nearest",behavior:reduceMotion()?"auto":"smooth"})}return}
   const fl=e.target.closest(".flip");if(fl){SND.flip();fl.setAttribute("aria-pressed",fl.getAttribute("aria-pressed")!=="true");return}
 });
 
 /* Zaman yolculuğu: kart karıştırma + yıldız tüneli + yıl sayacı */
-const reduceMotion=()=>matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion=()=>document.documentElement.classList.contains("rm");
 function startDraw(){
   if(tmBusy)return;
   const pool=PAINTERS.filter(k=>P[k].w.length&&(tmFilter==="all"||secOf(k)===tmFilter)&&k!==tmPick);
@@ -2063,7 +2071,7 @@ function renderDonemler(){
             <span class="mc-foot"><span class="mc-who">${escH(n.w.split(", ").map(pkey).join(" · "))}</span>${r?`<span class="mc-read">✓ Okundu</span>`:`<span class="mc-go">Oku →</span>`}</span></a>`}).join("")}</div>
       </section>`).join("")}</div>`;
 }
-function setFilter(s,e,scroll){dSec=s;dEra=e;saveFilter();renderDonemler();if(scroll){const t=$("#dres");if(t)t.scrollIntoView({block:"start",behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"})}}
+function setFilter(s,e,scroll){dSec=s;dEra=e;saveFilter();renderDonemler();if(scroll){const t=$("#dres");if(t)t.scrollIntoView({block:"start",behavior:reduceMotion()?"auto":"smooth"})}}
 $("#v-donemler").addEventListener("click",e=>{
   const em=e.target.closest(".era-mini");if(em){const s=em.dataset.sec,era=+em.dataset.era;galleryFly(s,era,()=>setFilter(s,era,true));return}
   const sm=e.target.closest(".scard-main");if(sm){const s=sm.dataset.sec;if(dSec===s)setFilter(null,null);else galleryFly(s,null,()=>setFilter(s,null,true));return}
